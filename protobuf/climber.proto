@@ -1,0 +1,15 @@
+syntax = "proto3";
+
+option go_package = "climberinfo/protobuf";
+
+service ClimberInfo {
+  rpc GetClimber (GetClimberRequest) returns (GetClimberResponse) {}
+}
+
+message GetClimberRequest {
+  string name = 1;
+}
+
+message GetClimberResponse {
+  string info = 1;
+}
